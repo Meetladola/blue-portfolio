@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="styles.css">
     <title>Meet Portfolio.</title>
 </head>
+<div class="loading-screen" id="loading-screen">
+    <div class="loader">
+        <div class="circle"></div>
+        <!-- <p>Loading, please wait...</p> -->
+    </div>
+</div>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <nav class="navbar navbar-expand-lg navbar-dark bg-custom p-2 mb-5 fixed-top">
@@ -326,15 +332,27 @@
             </div>
             </div>
         </footer>
+        
         <button id="back-to-top" class="btn btn-primary">
             <i class="fas fa-arrow-up"></i>
         </button>
-    
+
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="contact-form.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Show loading screen on document ready
+                $('#loading-screen').removeClass('hidden');
+    
+                // Simulate loading for 2 seconds
+                setTimeout(function() {
+                    $('#loading-screen').addClass('hidden'); // Hide loading screen after 2 seconds
+                }, 2000);
+            });
+        </script>
         <script>
             // Swiper initialization
             const swiper = new Swiper('.swiper', {
@@ -344,16 +362,16 @@
                     el: '.swiper-pagination',
                     clickable: true,
                 },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
                 autoplay: {
                     delay: 2000,
                     disableOnInteraction: false,
                 },
                 keyboard: {
                     enabled: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
                     1024: {
