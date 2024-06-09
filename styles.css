@@ -10,16 +10,37 @@ body {
 span{
   color: #007aff;
 }
-.navbar {
+/* .navbar {
   background-color: white;
   color:    #007aff;
   font-weight: 500;
 
 .navbar:hover{
   color:    #007aff;
+} */
+
+
+.navbar {
+  background-color: #ffffff !important;
 }
 
+.navbar-brand, .nav-link {
+  /* color: #f8f9fa !important; */
+  font-weight: 500;
 }
+
+.nav-link.active {
+  color: #007bff !important;
+}
+
+
+
+
+
+
+
+
+
 .btn-close-white {
   color: #fff;
   background-color: transparent; 
@@ -294,7 +315,6 @@ span{
 
 
 
-/* Back to Top Button Styles */
 #back-to-top {
   position: fixed;
   bottom: 95px;
