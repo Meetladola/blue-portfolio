@@ -240,7 +240,7 @@ span{
     width: 100%;
     height: 52px;
     /* border-radius: 60px; */
-    background-color: whitesmoke;
+    background-color: white;
     z-index: 999;
 }
 
@@ -371,10 +371,6 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
   overflow-y: scroll; /* Enable vertical scrollbar */
 }
 
