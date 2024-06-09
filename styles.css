@@ -241,7 +241,7 @@ span{
     height: 52px;
     /* border-radius: 60px; */
     background-color: whitesmoke;
-    z-index: 1000;
+    z-index: 999;
 }
 
  /* .nav :hover{
@@ -335,29 +335,46 @@ span{
 
 
 
-
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Color of the track */
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #007aff; /* Color of the handle */
-  border-radius: 30px; /* Roundness of the handle */
+  border-radius: 5px; /* Roundness of the handle */
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0056b3; /* Darker color on hover */
 }
 
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #007aff #f1f1f1;
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+      width: 1px; /* Adjust the width for mobile view */
+  }
+
+  html {
+      scrollbar-width: thin;
+      scrollbar-color: #007aff #f1f1f1;
+  }
+}
+
 body {
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
   overflow-y: scroll; /* Enable vertical scrollbar */
 }
 
